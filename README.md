@@ -1,6 +1,6 @@
 # HabitzFlow
 
-A habit-tracking web application built to practice practical web development, JavaScript functionality, and Flask/Python development.
+A Habit-Tracking Web Application built to practice practical web development, JavaScript functionality, and Flask/Python development.
 
 ## Features
 

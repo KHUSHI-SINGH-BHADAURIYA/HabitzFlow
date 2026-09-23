@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HabitzFlow</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>HabitzFlow</h1>
+        <p>Build Habits, Keep Streaks.</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+    <div class="stat-card">
+        <h3 id="totalHabits">0</h3>
+        <p>Total Habits</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="completedToday">0</h3>
+        <p>Completed Today</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="bestStreak">0</h3>
+        <p>Best Streak 🔥</p>
+    </div>
+</section>
+
+<section class="progress-section">
+    <div class="progress-header">
+        <h3>Today's Progress</h3>
+        <span id="progressText">0%</span>
+    </div>
+
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+</section>
+
+        <!-- Add Habit Section -->
+        <section class="Add-Habit">
+            <input
+                type="text"
+                id="habitInput"
+                placeholder="Enter a new Habit"
+            >
+
+            <button id="addHabitBtn">
+                Add Habit
+            </button>
+        </section>
+
+        <!-- Habit List -->
+        <section class="Habit-list">
+            <h2>My Habits</h2>
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

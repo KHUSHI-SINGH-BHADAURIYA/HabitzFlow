@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #4f46e5;
+}
+
+header p {
+    margin-top: 10px;
+    color: #64748b;
+    font-size: 17px;
+}
+
+main {
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.Add-Habit {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.Add-Habit input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: white;
+}
+
+.Add-Habit input:focus {
+    border-color: #6366f1;
+}
+
+.Add-Habit button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Add-Habit button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+.Habit-list h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.Habit {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.Habit h3 {
+    margin: 0 0 7px;
+    font-size: 18px;
+}
+
+.Habit p {
+    margin: 0;
+    color: #f97316;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Habit button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #22c55e;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Habit button:hover {
+    background: #16a34a;
+}
+
+.Habit button:disabled {
+    background: #94a3b8;
+    cursor: default;
+}
+
+.Habit.completed {
+    opacity: 0.75;
+}
+
+.Habit.completed h3 {
+    text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+    .Add-Habit {
+        flex-direction: column;
+    }
+
+    .Add-Habit button {
+        width: 100%;
+    }
+
+    .Habit {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Habit button {
+        width: 100%;
+    }
+}
+.habit-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.delete-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #4f46e5;
+}
+
+.stat-card p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+.progress-section {
+    background: white;
+    padding: 18px 20px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+#progressText {
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+.habit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.habit-actions .delete-btn {
+    background: #ef4444;
+}
+
+.habit-actions .delete-btn:hover {
+    background: #dc2626;
+}
+
+.habit-actions button {
+    min-width: 90px;
+}
+
+@media (max-width: 600px) {
+    .habit-actions {
+        width: 100%;
+    }
+
+    .habit-actions button {
+        flex: 1;
+    }
+}
